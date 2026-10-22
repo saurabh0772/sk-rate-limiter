@@ -1,0 +1,65 @@
+{
+  "name": "sk-rate-limiter",
+  "version": "1.0.0",
+  "description": "Production-ready, lightweight, and easy-to-use rate-limiting middleware for Express APIs with in-memory and Redis storage support.",
+  "main": "src/index.js",
+  "module": "src/index.mjs",
+  "types": "types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "import": "./src/index.mjs",
+      "require": "./src/index.js",
+      "default": "./src/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "types",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/**/*.test.js",
+    "test:coverage": "node --test --experimental-test-coverage test/**/*.test.js"
+  },
+  "keywords": [
+    "rate-limit",
+    "rate-limiter",
+    "express",
+    "redis",
+    "middleware",
+    "api",
+    "security",
+    "throttling",
+    "fixed-window",
+    "ddos-protection"
+  ],
+  "author": "Saurabh",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saurabh0772/sk-rate-limiter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/saurabh0772/sk-rate-limiter/issues"
+  },
+  "homepage": "https://github.com/saurabh0772/sk-rate-limiter#readme",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "peerDependencies": {
+    "express": "^4.0.0 || ^5.0.0"
+  },
+  "peerDependenciesMeta": {
+    "express": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "express": "^4.21.2",
+    "ioredis": "^5.4.2",
+    "supertest": "^7.0.0"
+  }
+}
